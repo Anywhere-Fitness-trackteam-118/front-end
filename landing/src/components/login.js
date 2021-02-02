@@ -49,8 +49,5 @@ const Login = ( ) =>{
    };
    
    export default Login;
-//   everything is awesome, everything is cool when youre part of a team"
 
-// baddummy
-// bradsdummy
 
