@@ -4,7 +4,7 @@
 Login- authorization and token storage
 
 sign up for classes
-add a class
+add a class (need to add functionality)
 drop a class
 delete a class
 Storage- store? used for classes?

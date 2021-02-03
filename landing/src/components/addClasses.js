@@ -10,12 +10,9 @@ const initialClasses ={
         instructorName:'',
         location:''
     }
-
 }
-
 const AddClass = () =>{
 const [state, setState] = useState(initialClasses)
-
 handleChange= (e)=>{
     setState({
         newClass:{
@@ -26,7 +23,7 @@ handleChange= (e)=>{
 }
 addAClass =(e) =>{
     e.preventDefault()
-    
+
 }
 
 return (
