@@ -4,6 +4,7 @@ import {Button, Form, FormGroup, Label, Input} from 'reactstrap'
 
 const initialClasses ={
     newClass:{
+        id:Date.now,
         className:'',
         duration:'',
         instructorName:'',
@@ -15,6 +16,18 @@ const initialClasses ={
 const AddClass = () =>{
 const [state, setState] = useState(initialClasses)
 
+handleChange= (e)=>{
+    setState({
+        newClass:{
+            ...state.newClass,
+            [e.target.name]:e.target.value
+        }
+    })
+}
+addAClass =(e) =>{
+    e.preventDefault()
+    
+}
 
 return (
     <Form>
@@ -28,7 +41,7 @@ return (
             <Label for="location">Location</Label>
             <Input onChange={handleChange} value={state.newClass.location} type="text" name="location" id="location"/>
         </FormGroup>
-        <Button onClick={AddClass}>Add Class</Button>
+        <Button onClick={AddAClass}>Add A Class</Button>
     </Form>
 )
 }
