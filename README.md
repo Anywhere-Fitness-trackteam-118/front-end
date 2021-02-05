@@ -6,6 +6,7 @@ https://github.com/Anywhere-Fitness-trackteam-118/front-end
 
 ## Project Memebers
 [Ian Tucker](https://github.com/Iandecisiv)
+
 [Bradley Dion](https://github.com/Bradleydion)
 
 ### MVP Requirements
