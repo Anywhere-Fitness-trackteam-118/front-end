@@ -5,10 +5,13 @@ import {Button, Form, FormGroup, Label, Input} from 'reactstrap'
 const initialClasses ={
     newClass:{
         id:Date.now,
-        className:'',
+        name:'',
+        instructor_name:'',
+        date:'',
+        max_size:'',
         duration:'',
-        instructorName:'',
-        location:''
+        signedUp: false
+
     }
 }
 const AddClass = () =>{
@@ -29,14 +32,16 @@ addAClass =(e) =>{
 return (
     <Form>
         <FormGroup className="Class Form">
-            <Label for="className"> Class Name </Label>
-            <Input onChange ={handleChange} value={state.newClass.className} type="text" name="className" id="className" placeholder="Class Name"/>
-            <Label for="duration">Class Length</Label>
-            <Input onChange={handleChange} value={state.newClass.duration} type="text" name="duration" id="duration"/>
-            <Label for="instructorName">Instructor</Label>
-            <Input onChange={handleChange} value={state.newClass.instructorName} type="text" name="instructorName" id="instructorName"/>
-            <Label for="location">Location</Label>
-            <Input onChange={handleChange} value={state.newClass.location} type="text" name="location" id="location"/>
+            <Label for="name"> Class Name </Label>
+            <Input onChange ={handleChange} value={state.newClass.name} type="text" name="name" id="name" placeholder="Class Name"/>
+            <Label for="instructor_name">Instructor</Label>
+            <Input onChange={handleChange} value={state.newClass.instructor_name} type="text" name="instructor_name" id="instructor_name" placeholder="Instructor's Name"/>
+            <Label for="date">Date</Label>
+            <Input onChange={handleChange} value={state.newClass.date} type="text" name="date" id="date" placeholder="Date"/>
+            <Label for="max_size">Max Class Size</Label>
+            <Input onChange={handleChange} value={state.newClass.max_size} type="text" name="max_size" placeHolder="max_size" id="max_size"/>
+            <Label for="duration">Class Duration</Label>
+            <Input onChange={handleChange} value={state.newClass.duration} type="text" name="duration" id="duration" placeholder="duration"/>
         </FormGroup>
         <Button onClick={AddAClass}>Add A Class</Button>
     </Form>
