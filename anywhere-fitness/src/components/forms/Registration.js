@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form, Field, withFormik } from 'formik'
 import * as Yup from 'yup'
-import {axiosWithAuth} from '../utils/axiosWithAuth'
+import {axiosWithAuth} from '../../utils/axiosWithAuth';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { TextField, Select } from 'formik-material-ui';
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SignUp = ({ errors, touched}) => {
+const Register = ({ errors, touched}) => {
 const classes = useStyles();
 
   return (
@@ -91,12 +91,12 @@ const classes = useStyles();
         margin="normal"
         fullWidth
           type='text'
-          name='phone_number'
-          label='Phone Number'
-          className='phone_number'
+          name='role'
+          label='admin or user'
+          className='role'
         />
-        {touched.phone_number && errors.phone_number && (
-          <p className='error'>{errors.phone_number}</p>
+        {touched.role && errors.role && (
+          <p className='error'>{errors.role}</p>
         )}
         </FormControl>
 
@@ -135,10 +135,10 @@ const FormikApp = withFormik({
     .oneOf(['instructor', 'users'])
   }),
   
-  handleSubmit(values, { setStatus }){
+  handleSubmit(values, { setStatus, props }){
     console.log("User submitted");
     axiosWithAuth()
-    .post("auth/register", values)
+    .post("/auth/register", values)
     .then(res => {
         setStatus(res.data);
         console.log(res);
@@ -148,7 +148,7 @@ const FormikApp = withFormik({
       .catch(error => console.log(error.response));
   }
 })
-const PopulatedSignUpForm = FormikApp(SignUp)
+const PopulatedRegisterForm = FormikApp(Register)
 
-export default PopulatedSignUpForm;
+export default PopulatedRegisterForm;
 
