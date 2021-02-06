@@ -1,17 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import { Provider } from "react-redux";
-import combineReducers from "./state/reducers";
+import combineReducers from "./state/reducers/index";
 import { createStore, applyMiddleware } from "redux";
 
 import logger from "redux-logger";
 
 const store = createStore(combineReducers, applyMiddleware(logger));
+
+
+// ReactDOM.render(<App />, document.getElementById("root"));
 
 ReactDOM.render(
   <React.StrictMode>
@@ -25,4 +28,4 @@ ReactDOM.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals(console.log);
