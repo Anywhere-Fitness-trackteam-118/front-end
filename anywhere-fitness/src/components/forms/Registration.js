@@ -48,7 +48,7 @@ const classes = useStyles();
         fullWidth
           type='text'
           name='name'
-          label='name'
+          label='Name'
           autoComplete='name'
           className='input'
         />
@@ -59,7 +59,7 @@ const classes = useStyles();
         fullWidth
           type='text'
           name='email'
-          label='email'
+          label='Email'
           autoComplete='email'
           className='input'
         />
@@ -95,7 +95,7 @@ const classes = useStyles();
         fullWidth
           type='text'
           name='role'
-          label='instructor or user'
+          label='Instructor or User'
           className='role'
         />
         {touched.role && errors.role && (
