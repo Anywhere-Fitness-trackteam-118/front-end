@@ -12,4 +12,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.registration{
+    background-image:url('./images/pic02.jpg');
+  }
 

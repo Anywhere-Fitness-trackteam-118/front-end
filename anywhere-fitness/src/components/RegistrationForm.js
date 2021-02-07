@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Button} from "reactstrap"
 import { Route } from "react-router-dom";
-import './reg.css'
+
 
 const RegistrationForm = () => {
 
@@ -26,7 +26,7 @@ const RegistrationForm = () => {
 
 
 return(
-    <div name="registration" id="registration">
+    <div name="registration" id="registration" >
     <form onSubmit={submitForm}>
         <label htmlFor="username">Username</label>
         <input
