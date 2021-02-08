@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {Button} from "reactstrap"
 import { Route } from "react-router-dom";
 
+
 const RegistrationForm = () => {
 
     const [user,setUser]= useState({username:"",fullName:"",password:"",phoneNumber:""})
@@ -25,7 +26,7 @@ const RegistrationForm = () => {
 
 
 return(
-    
+    <div name="registration" id="registration" >
     <form onSubmit={submitForm}>
         <label htmlFor="username">Username</label>
         <input
@@ -63,6 +64,7 @@ return(
         />
         <Button type='submit'>Submit</Button>
     </form>
+    </div>
     
 )
 }

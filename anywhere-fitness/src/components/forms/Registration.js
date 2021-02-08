@@ -20,10 +20,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    backgroundColor:"#f3ebe1",
+    opacity:.9,
+    borderRadius:15,
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
-    background: '#49fcd4',
+    background: '#111e6c',
     color: 'white',
   },
 }));
@@ -45,7 +48,7 @@ const classes = useStyles();
         fullWidth
           type='text'
           name='name'
-          label='name'
+          label='Name'
           autoComplete='name'
           className='input'
         />
@@ -56,7 +59,7 @@ const classes = useStyles();
         fullWidth
           type='text'
           name='email'
-          label='email'
+          label='Email'
           autoComplete='email'
           className='input'
         />
@@ -92,7 +95,7 @@ const classes = useStyles();
         fullWidth
           type='text'
           name='role'
-          label='admin or user'
+          label='Instructor or User'
           className='role'
         />
         {touched.role && errors.role && (
